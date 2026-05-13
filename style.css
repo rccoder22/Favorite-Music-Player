@@ -198,3 +198,16 @@ body {
 .controls .main i.active {
     display: inline;
 }
+
+/* Maximize music player styles */
+
+.Music-player-sec .hide {
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+
+.Music-player-sec.active .hide {
+    display: block;
+    opacity: 1;
+}
