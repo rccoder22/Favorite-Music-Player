@@ -121,3 +121,80 @@ body {
     text-transform: capitalize;
     padding: 5px;
 }
+
+.Music-player-sec {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--alpha-color);
+    transition: 1s;
+}
+
+.music-seek-bar {
+    width: 100%;
+    position: absolute;
+    top: -4px;
+    height: 8px;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.music-seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 10px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: -400px 0 0 400px var(--primary-color);
+}
+
+.Current-song-name {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.controls {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+}
+
+.controls span {
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+
+.Music-player-sec.active .controls {
+    justify-content: space-between;
+}
+
+.Music-player-sec.active .controls span {
+    font-size: 25px;
+    display: block;
+    opacity: 0.5;
+}
+
+.Music-player-sec.active .controls span.active {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.controls .main i {
+    margin: 0 5px;
+    display: none;
+}
+
+.controls .main i.active {
+    display: inline;
+}
